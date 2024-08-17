@@ -198,7 +198,7 @@ const totalRaisedStr = GAMES_JSON.reduce( (total, game) => {
 
 // create a string that explains the number of unfunded games using the ternary operator
 
-const unfundedGamesStr = `A total of $${totalRaisedStr.toLocaleString('en-US')} has been raised for ${totalGamesStr > 1 ? 'games' : 'game'}. Currently, ${listUnfundedCount > 1 ? 'games' : 'game'} remain${listUnfundedCount > 1 ? 's' : ''} unfunded. We need your help to fund ${listUnfundedCount > 1 ? 'these' : 'this'} amazing game${listUnfundedCount > 1 ? 's' : ''}.`;
+const unfundedGamesStr = `A total of $${totalRaisedStr.toLocaleString('en-US')} has been raised for ${totalGames-listUnfundedCount} ${totalGamesStr > 1 ? 'games' : 'game'}. Currently, ${listUnfundedCount} ${listUnfundedCount > 1 ? 'games' : 'game'} remain${listUnfundedCount > 1 ? 's' : ''} unfunded. We need your help to fund ${listUnfundedCount > 1 ? 'these' : 'this'} amazing game${listUnfundedCount > 1 ? 's' : ''}.`;
 
 // create a new DOM element containing the template string and append it to the description container
 
