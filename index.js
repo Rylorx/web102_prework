@@ -165,6 +165,9 @@ const fundedBtn = document.getElementById("funded-btn");
 const allBtn = document.getElementById("all-btn");
 
 // add event listeners with the correct functions to each button
+document.getElementById("unfunded-btn").addEventListener("click", filterUnfundedOnly);
+document.getElementById("funded-btn").addEventListener("click", filterFundedOnly);
+document.getElementById("all-btn").addEventListener("click", showAllGames);
 
 
 /*************************************************************************************
@@ -176,12 +179,30 @@ const allBtn = document.getElementById("all-btn");
 const descriptionContainer = document.getElementById("description-container");
 
 // use filter or reduce to count the number of unfunded games
+let listUnfundedGames = GAMES_JSON.filter( (game) => {
+    return game.pledged < game.goal;
+});
+
+const listUnfundedCount = listUnfundedGames.length;
+
+const totalGamesStr = GAMES_JSON.length;
+
+const totalRaisedStr = GAMES_JSON.reduce( (total, game) => {
+    return total + game.pledged;
+}, 0);
+
+// const unfundedGamesStr = `A total of $${totalRaisedStr.toLocaleString('en-US')} has been raised for ${totalGamesStr > 1 ? 'games' : 'game'}. Currently, ${listUnfundedCount > 1 ? 'games' : 'game'} remain${listUnfundedCount > 1 ? 's' : ''} unfunded. We need your help to fund ${listUnfundedCount > 1 ? 'these' : 'this'} amazing game${listUnfundedCount > 1 ? 's' : ''}.`;
+
+
 
 
 // create a string that explains the number of unfunded games using the ternary operator
 
+const unfundedGamesStr = `A total of $${totalRaisedStr.toLocaleString('en-US')} has been raised for ${totalGamesStr > 1 ? 'games' : 'game'}. Currently, ${listUnfundedCount > 1 ? 'games' : 'game'} remain${listUnfundedCount > 1 ? 's' : ''} unfunded. We need your help to fund ${listUnfundedCount > 1 ? 'these' : 'this'} amazing game${listUnfundedCount > 1 ? 's' : ''}.`;
 
 // create a new DOM element containing the template string and append it to the description container
+
+descriptionContainer.innerHTML = unfundedGamesStr;
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
