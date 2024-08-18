@@ -1,10 +1,10 @@
-# WEB102 Prework - *Name of App Here*
+# WEB102 Prework - Sea Monster Crowdfunding
 
-Submitted by: **Your Name Here**
+Submitted by: **Ryan Daniel LeKuch**
 
-**Name of your app** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+**Sea Monster Crowdfunding** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **X** hours spent in total
+Time spent: **5** hours spent in total
 
 ## Required Features
 
@@ -18,6 +18,10 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 * [ ] List anything else that you can get done to improve the app functionality!
+
+* [] The application displays the most unfunded game, that requires more funding
+
+* [] Further, the information section contains perfect grammar that automatically updates as more games are added or removed from the website
 
 ## Video Walkthrough
 
@@ -36,9 +40,13 @@ GIF created with ...
 
 Describe any challenges encountered while building the app.
 
+Most of the major challenges that were encountered while building the application were those revolving around JavaScript phrases. For example, at first I didn't understand how filters or reducing worked, and it took me a little bit of time.
+
+Further, adding the extra challenge of the search bar also took me a bit of time to figure out. For example, the input type of text for the search bar as well as the 'input' event listener took me a little bit of research and time to get used to. Other than that, I really enjoyed building this application and learning all about REACT and JavaScript and how they interact.
+
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2024] [Ryan Daniel LeKuch]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
