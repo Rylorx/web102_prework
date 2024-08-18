@@ -159,6 +159,19 @@ function showAllGames() {
 
 }
 
+function filterSearch(term){
+    const filteredGames = GAMES_JSON.filter(game => {
+        return game.name.toLowerCase().includes(term);
+    });
+
+    // Clear current games displayed
+    deleteChildElements(gamesContainer);
+
+    // Add the filtered games to the page
+    addGamesToPage(filteredGames);
+}
+
+
 // select each button in the "Our Games" section
 const unfundedBtn = document.getElementById("unfunded-btn");
 const fundedBtn = document.getElementById("funded-btn");
@@ -211,6 +224,7 @@ descriptionContainer.innerHTML = unfundedGamesStr;
 
 const firstGameContainer = document.getElementById("first-game");
 const secondGameContainer = document.getElementById("second-game");
+const thirdGameContainer = document.getElementById("third-game");
 
 const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
     return item2.pledged - item1.pledged;
@@ -218,6 +232,29 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 
 // use destructuring and the spread operator to grab the first and second games
 
+const[firstGame, secondGame, ...restGames] = sortedGames;
+const lastGame = sortedGames[sortedGames.length-1];
+
+
 // create a new element to hold the name of the top pledge game, then append it to the correct element
 
+const topGameElement = document.createElement('div');
+const runnerUpGameElement = document.createElement('div');
+const unfundedGameElement = document.createElement('div');
+
+topGameElement.innerHTML = `<h3>${firstGame.name}</h3>`;
+runnerUpGameElement.innerHTML = `<h3>${secondGame.name}</h3>`;
+unfundedGameElement.innerHTML = `<h3>${lastGame.name}</h3>`;
+
+firstGameContainer.appendChild(topGameElement);
+secondGameContainer.appendChild(runnerUpGameElement);
+thirdGameContainer.appendChild(unfundedGameElement);
+
 // do the same for the runner up item
+
+const searcher = document.getElementById('search-bar');
+
+searcher.addEventListener('input', function()  {
+    const term = searcher.value.toLowerCase();
+    filterSearch(term);
+})
