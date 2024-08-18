@@ -30,6 +30,10 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
+https://imgur.com/a/lNtWyS0
+
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/lNtWyS0"  ><a href="//imgur.com/a/lNtWyS0">Pre-Work 102 Codepath Work</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
 <img src='https://imgur.com/a/lNtWyS0' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
