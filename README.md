@@ -14,14 +14,17 @@ The following **required** functionality is completed:
 * [ ] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
 * [ ] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
 * [ ] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
+* [ ] The website also contains statistics about the total number of games present on the website.
 
 The following **optional** features are implemented:
 
 * [ ] List anything else that you can get done to improve the app functionality!
 
-* [] The application displays the most unfunded game, that requires more funding
+* [ ] The application displays the most unfunded game, that requires more funding.
 
-* [] Further, the information section contains perfect grammar that automatically updates as more games are added or removed from the website
+* [ ] Further, the information section contains perfect grammar that automatically updates as more games are added or removed from the website.
+
+* [ ] Lastly, the most major feature that I added to this application was a search bar bonus feature. This allows you to type out any game and the website will immediately update the list of games present.
 
 ## Video Walkthrough
 
@@ -42,7 +45,7 @@ Describe any challenges encountered while building the app.
 
 Most of the major challenges that were encountered while building the application were those revolving around JavaScript phrases. For example, at first I didn't understand how filters or reducing worked, and it took me a little bit of time.
 
-Further, adding the extra challenge of the search bar also took me a bit of time to figure out. For example, the input type of text for the search bar as well as the 'input' event listener took me a little bit of research and time to get used to. Other than that, I really enjoyed building this application and learning all about REACT and JavaScript and how they interact.
+Further, adding the extra challenge of the search bar also took me a bit of time to figure out. For example, the input type of text for the search bar as well as the 'input' event listener took me a little bit of research and time to get used to. Other than that, I really enjoyed building this application and learning all about REACT and JavaScript and how they interact. I really enjoyed this prework and am excited to learn more!
 
 ## License
 
